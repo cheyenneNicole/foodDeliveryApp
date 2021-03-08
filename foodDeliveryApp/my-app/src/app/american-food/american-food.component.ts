@@ -16,7 +16,6 @@ export class AmericanFoodComponent implements OnInit {
   getRestaurantsList(){
     let bigCities = [];
     this.service.getRestaurantsList().subscribe(data => {
-      
     for (let i = 0; i < data.length; i++) {
       if (data[i].type == "American") {
         bigCities.push(data[i]);
@@ -26,14 +25,17 @@ export class AmericanFoodComponent implements OnInit {
       console.log(bigCities);
     });
   }
+  getRestaurantById(){
+      let bigCities = [];
+      
+  }
   callFunction(event, restaurant){
-    console.log(restaurant + "CLICKED");
+    this.service.getRestaurantById("60395a3583c6e60854596a95").subscribe(data => {
+      console.log(data.meals);
+      });
+    console.log(restaurant.meals[0]);
   }
   ngOnInit(): void {
-    //this.router.events.subscribe(value => {
-      //  this.restaurants.filter(
-      //   restaurants => restaurants.type === "American");
       this.getRestaurantsList();
-    //});
   }
 }

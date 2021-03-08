@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.foodDeliverySystem.dao.RestaurantsDAO;
+import com.example.foodDeliverySystem.entity.Meals;
 import com.example.foodDeliverySystem.entity.Restaurants;
 import com.example.foodDeliverySystem.service.RestaurantsService;
 
@@ -27,6 +28,9 @@ public class RestaurantsController {
 	@Autowired
 	RestaurantsService service;
 	
+//	@Autowired
+//	RestaurantsDAO dao;
+
 	@PostMapping(value= "/addRestaurants")
 	public String create(@RequestBody List<Restaurants> rests) {
 		service.createRestaurants(rests);
@@ -44,5 +48,17 @@ public class RestaurantsController {
 		Optional<Restaurants> restaurant = service.findByType(type);
 		return restaurant;
     }
-	
 }
+
+//	@GetMapping("/restaurants/{id}")
+//	public ResponseEntity<List<Meals>> findMealsByRestId(@PathVariable String id) {
+//			Optional<Restaurants> restaurant = service.findByType(id);
+//			return restaurant
+//			Meals[] meals = restaurant.;
+//		    if (meals.isEmpty()) {
+//		      return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//		    }
+//		    return new ResponseEntity<>(meals, HttpStatus.OK);
+//		  } 
+//	}
+	

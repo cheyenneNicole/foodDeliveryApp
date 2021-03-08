@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.foodDeliverySystem.dao.RestaurantsDAO;
+import com.example.foodDeliverySystem.entity.Meals;
 import com.example.foodDeliverySystem.entity.Restaurants;
 
 @Service
@@ -30,5 +31,11 @@ public class RestaurantsServiceImpl implements RestaurantsService{
 	public Optional<Restaurants> findByType(String type) {
 		return dao.findById(type);
 	}
+
+//	@Override
+//	public List<Meals> findMealsByRestId(String id) {
+//		return dao.findMealsByRestId(id);
+//	}
+	
 
 }

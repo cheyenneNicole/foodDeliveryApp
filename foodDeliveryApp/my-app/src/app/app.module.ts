@@ -13,6 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { TexMexFoodComponent } from './tex-mex-food/tex-mex-food.component';
 import { ChineseFoodComponent } from './chinese-food/chinese-food.component';
+import { MealsComponent } from './meals/meals.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ChineseFoodComponent } from './chinese-food/chinese-food.component';
     HomeComponent,
     AmericanFoodComponent,
     TexMexFoodComponent,
-    ChineseFoodComponent
+    ChineseFoodComponent,
+    MealsComponent
   ],
   imports: [
     BrowserModule,
