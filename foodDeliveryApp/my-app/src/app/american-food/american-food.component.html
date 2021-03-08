@@ -1,0 +1,16 @@
+<div><h1>American Restaurants</h1></div>
+
+<div>
+  <table class="table" style="width: 80%">
+    <tr>
+      <th>Restaurants</th>
+    </tr>
+    <tr *ngFor="let restaurant of restaurants">
+      <td>
+        <button (click)="callFunction($event, restaurant)">
+        {{restaurant.name}}
+      </button>
+      </td>
+    </tr>
+  </table>
+</div>

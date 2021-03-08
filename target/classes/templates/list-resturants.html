@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>Issues</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <div th:switch="${resturants}">
+            <h2 th:case="null">No issues yet!</h2>
+            <div th:case="*">
+                <h2>Issues</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Severity</th>
+                        <th>Assignee</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="issue : ${resturants}">
+                        <td th:text="${resturants.name}"></td>
+                        <td th:text="${resturants.location}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+        </div>
+    </body>
+</html>

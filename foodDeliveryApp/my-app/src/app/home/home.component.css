@@ -1,0 +1,18 @@
+.btn-american {
+    background-image: url('/assets/americanFood.jpg') !important;
+    background-size: cover;
+    padding: 75px 65px;
+    color:white;
+}
+.btn-texmex {
+    background-image: url('/assets/chineseFood.jpg') !important;
+    background-size: cover;
+    padding: 75px 65px;
+    color: white;
+}
+.btn-chinese {
+    background-image: url('/assets/texMexFood.jpg') !important;
+    background-size: cover;
+    padding: 75px 65px;
+    color:white;
+}
