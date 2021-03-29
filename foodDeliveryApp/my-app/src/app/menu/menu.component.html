@@ -1,0 +1,15 @@
+<div>
+    <table class="table" style="width: 80%">
+      <tr>
+        <th>Food</th>
+      </tr>
+      <tr *ngFor="let meal of meals">
+        <td>
+            <button (click)="callFunction(meal)">
+          {{meal.name}}
+          {{meal.price}}
+        </button>
+        </td>
+      </tr>
+    </table>
+  </div>

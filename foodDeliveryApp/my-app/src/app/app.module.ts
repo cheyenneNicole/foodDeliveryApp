@@ -13,7 +13,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { TexMexFoodComponent } from './tex-mex-food/tex-mex-food.component';
 import { ChineseFoodComponent } from './chinese-food/chinese-food.component';
-import { MealsComponent } from './meals/meals.component';
+import { MenuComponent } from './menu/menu.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { MealsComponent } from './meals/meals.component';
     AmericanFoodComponent,
     TexMexFoodComponent,
     ChineseFoodComponent,
-    MealsComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,8 @@ import { MealsComponent } from './meals/meals.component';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
